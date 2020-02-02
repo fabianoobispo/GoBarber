@@ -6,6 +6,9 @@ import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FilerController from './app/controllers/FileController';
 import ProviderControllers from './app/controllers/ProviderControllers';
+import AppnitmentControler from './app/controllers/AppointmentController';
+import ScheduleController from './app/controllers/ScheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -20,6 +23,14 @@ routes.use(authMiddleware);
 routes.put('/users', UserController.update);
 
 routes.get('/providers', ProviderControllers.index);
+
+routes.post('/appointments', AppnitmentControler.store);
+routes.get('/appointments', AppnitmentControler.index);
+
+routes.get('/schedule', ScheduleController.index);
+
+routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
 
 routes.post('/files', upload.single('file'), FilerController.store);
 
