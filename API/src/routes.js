@@ -18,6 +18,6 @@ routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
 
-routes.post('/files', upload.single('file'), FilerController.store );
+routes.post('/files', upload.single('file'), FilerController.store);
 
 export default routes;
