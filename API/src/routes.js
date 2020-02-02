@@ -5,6 +5,7 @@ import multerConfig from './config/multer';
 import UserController from './app/controllers/UserController';
 import SessionController from './app/controllers/SessionController';
 import FilerController from './app/controllers/FileController';
+import ProviderControllers from './app/controllers/ProviderControllers';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -17,6 +18,8 @@ routes.post('/sessions', SessionController.store);
 routes.use(authMiddleware);
 
 routes.put('/users', UserController.update);
+
+routes.get('/providers', ProviderControllers.index);
 
 routes.post('/files', upload.single('file'), FilerController.store);
 
