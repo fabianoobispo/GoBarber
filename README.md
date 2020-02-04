@@ -1,5 +1,7 @@
 # GoBarber
-vou editar essa parte posteriormente 
+<p>vou editar essa parte posteriormente</p> 
+
+
 bancos utilizados:
 postgres, banco relacional 
 para criar no docker
