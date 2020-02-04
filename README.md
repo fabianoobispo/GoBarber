@@ -2,7 +2,9 @@
 <p>vou editar essa parte posteriormente</p> 
 
 
-bancos utilizados:
+
+### **1. Bancos utilizados**
+
 postgres, banco relacional 
 para criar no docker
 docker run --name postgresbarber -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
@@ -13,6 +15,7 @@ mongodb, banco nao relacional
 para criar no docker
 docker run --name mongobarber -p 27017:27017 -d -t mongo
 para iniciar no docker
+docker start mongobarber
 
 redis banco chave e valor
 para criar no docker
