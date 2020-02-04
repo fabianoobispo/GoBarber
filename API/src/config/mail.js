@@ -1,16 +1,15 @@
-
-export default{
-  host: 'smtp.mailtrap.io',
-  port: '2525',
+export default {
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
   secure: false,
   auth: {
-    user: '4a2544e845d5a2',
-    pass: '3086230b498481',
-   },
-   default:{
-    from: 'Equipe GoBarber <noreply@gobarber.com>'
-   }
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
+  default: {
+    from: 'Equipe GoBarber <noreply@gobarber.com>',
+  },
 };
 
-//mailgun ou sparkpost o mandril ou amazon ses
-//mailtrap para desenvolvimento
+// mailgun ou sparkpost o mandril ou amazon ses
+// mailtrap para desenvolvimento

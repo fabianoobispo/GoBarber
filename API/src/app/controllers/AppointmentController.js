@@ -17,8 +17,8 @@ class AppointmentController {
     const appointments = await Appointment.findAll({
       where: { user_id: req.userId, canceled_at: null },
       order: ['date'],
-      attributes: ['id', 'date'],
-      // mosntando 20 itens por gagina
+      attributes: ['id', 'date', 'past', 'cancelable'],
+      // mosntando 20 itens por pagina
       limit: 20,
       offset: (page - 1) * 20,
       include: [
