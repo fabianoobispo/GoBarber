@@ -1,3 +1,20 @@
+#api
+API/node_modules
+API/dist
+API/.env
+
+API/tmp/uploads/*
+!API/tmp/uploads/.gitkeep
+
+#web
+WEB/node_modules
+
+
+#mobile
+MOBILE/node_modules
+
+
+
 # Compiled class file
 *.class
 
